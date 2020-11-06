@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <title>Hotels Client</title>
+    <script>
+        $(document).ready(function(){
+            $('#allhotels').click(function(){
+                var url = 'http://localhost:3001/showHotels';
+                $.get(url,function(data,status){
+                    data.forEach(hotel => {
+                        var str='';
+                        for(const prop in hotel){
+                            str+=prop+' '+hotel[prop]+' '+'<br>';
+                        }
+                    $('#mydiv').append(str).append('<br>');
+                        
+                    });
+                })
+            });
+           
+            $('#citybutton').click(function(){
+                var url = 'http://localhost:3001/showByCity';
+                var citychoice=$('#city').val();
+                $.get(url,{city:citychoice} ,function(data,status){
+                    data.forEach(hotel => {
+                        var str='';
+                        for(const prop in hotel){
+                            str+=prop+' '+hotel[prop]+' '+'<br>';
+                        }
+                    $('#mydiv').append(str).append('<br>');
+                        
+                    });
+                })
+            });
+            
+
+         
+        })
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend align="left">Hotel Details</legend>
+        
+        <table border="1">
+            <tr>
+                <td><button id="allhotels">Show Hotels</button></td>
+            </tr>
+    
+            <tr>
+                <td>Enter City</td>
+                <td><input type="text" id="city"><br/> </td> 
+            </tr>
+
+            <tr>   
+                <td> <button id="citybutton">Search By City</button></td>
+            </tr>
+            <tr>
+                <td> Select Type</td>
+            <td>
+                <select name="hotel" id="hoteltype" onclick="selecttype()">
+                    <option value="select">--select--</option>
+                    <option value="Veg">Veg</option>
+                    <option value="Non-veg">Non-veg</option>
+                </select>
+                <div style="background-color: yellow;" id="mydiv"></div>
+            </td>
+            </tr>
+
+            <tr>
+                <td> Select Cusine</td>
+            <td>
+                <select name="hotelc" id="hotelcusine" onclick="selectcusine()">
+                    <option value="select">--select--</option>
+                    <option value="South Indian">South Indian</option>
+                    <option value="Italian">Italian</option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="Indian">Indian</option>
+                </select>
+                <div style="background-color: yellow;" id="mydiv"></div>
+            </td>
+            </tr>
+            <div id="mydiv"></div> 
+        </table>
+    </fieldset> 
+</body>
+</html>

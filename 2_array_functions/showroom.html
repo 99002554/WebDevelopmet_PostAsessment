@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Device Dropdown</title>
+ <script src="showroom.js">
+ </script>
+ </head>
+ <body>
+ <fieldset>
+    
+    <legend align="left">Consumer Electronics</legend>
+    
+    <table border="0.5">
+        <tr>
+            <td> Select Device</td>
+            <td>
+                <select name="device" id="mydevice" onclick="selectDevice()">
+                    <option value="select">--select--</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="TV">Television</option>
+                    <option value="Mobile">Mobile</option>
+                </select>
+                <div style="background-color: yellow;" id="mydiv"></div>
+            </td>
+        </tr>    
+    </table>
+</fieldset> 
+</body>
+ </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script>
+       $(document).ready(function(){
+           $('#show').click(function(){
+           username=$('#uname').val();
+           city=$('#ucity').val();
+           $('#mydiv').html('Welcome '+username+ ' from ' +city);
+           });
+        });
+    </script>
+</head>
+<body>  
+     <fieldset>
+    <legend align="left">User Details</legend>
+
+    <table border="0.75">
+        <form action="success.html"method="GET"name="myform">
+            <tr>
+                <td>Enter name</td>
+                <td><input type="text" name="username" id="uname" placeholder="Enter name"/><br/></td>
+            </tr>
+            
+            <tr>
+                <td>Enter Password</td>
+                <td><input type="password" name="password" id="pass" placeholder="Enter password"/><br></td>
+            </tr>
+            
+            <tr>
+                <td>Enter email ID</td>
+                <td><input type="text" name="emailID" id="email" placeholder="Enter Email ID"/><br/></td>
+            </tr>
+            
+            <tr>
+                <td>Enter Phone Number</td>
+                <td><input type="number" name="phonenumber" id="phno" placeholder="Enter Phone Number"/><br/></td>
+            </tr>
+            
+            
+        
+        </form>
+    </table>
+    
+</fieldset>
+</body>
+</html>

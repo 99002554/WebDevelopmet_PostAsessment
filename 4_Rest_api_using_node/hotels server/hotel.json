@@ -1,0 +1,23 @@
+[{
+    "name":" Udupi hotels ",
+    "city":"udupi",
+    "type":"Veg",
+    "cusine":"South Indian" 
+},
+{
+    "name":"  LOTT",
+    "city":"Manipal",
+    "type":"Non Veg",
+    "cusine":"Italian"
+},{
+    "name":"  Sais",
+    "city":"Manipal",
+    "type":" Veg",
+    "cusine":"Chinese"
+},{
+    "name":"  Spice garden",
+    "city":"RajajiNagar",
+    "type":" Veg",
+    "cusine":"Indian"
+}
+]

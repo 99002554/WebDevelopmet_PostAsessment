@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<script src="register.js"></script>
+</head>
+<body>
+    <fieldset>
+        <legend align="left">Personal Details</legend>
+
+        <table border="0.75">
+            <form action="success.html"method="GET"name="myform">
+                <tr>
+                    <td>Enter name</td>
+                    <td><input type="text" name="username" id="uname" placeholder="Enter name"/><br/></td>
+                </tr>
+                
+                <tr>
+                    <td>Enter Password</td>
+                    <td><input type="password" name="password" id="pass" placeholder="Enter password"/><br></td>
+                </tr>
+                
+                <tr>
+                    <td>Enter email ID</td>
+                    <td><input type="text" name="emailID" id="email" placeholder="Enter Email ID"/><br/></td>
+                </tr>
+                
+                <tr>
+                    <td>Enter Phone Number</td>
+                    <td><input type="number" name="phonenumber" id="phno" placeholder="Enter Phone Number"/><br/></td>
+                </tr>
+                
+                <tr>
+                    <td><input type="button" value="Register" onclick="validationForm()"/></td>
+                    <td><input type="reset" value="Clear"/></td>
+                </tr>
+            
+            </form>
+        </table>
+        
+    </fieldset>
+</body>
+</html>
